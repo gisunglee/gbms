@@ -3,17 +3,98 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>온실가스감축인지 예산서 작성 행정망(SSL VPN) 접근 신청 안내</title>
-<meta name="description" content="온실가스감축인지 예산제도 예산서 작성을 위한 행정망 SSL VPN 접근 신청 절차 및 설치 안내">
+<title>온실가스감축인지 운영시스템 접속(SSL VPN) 신청 안내</title>
+<meta name="description" content="산하기관·기술자문위원의 온실가스감축인지 운영시스템(GBMS) 접속을 위한 SSL VPN 사용 신청 절차 및 서식 안내">
 <link rel="stylesheet" href="style.css">
+<style>
+/* ── 이 페이지 전용 보조 스타일 (공용 style.css 위에 덧씌움) ── */
+.hero-grid{display:grid;grid-template-columns:1.25fr .9fr;gap:34px;align-items:center}
+.apply-box{
+  background:#fff;color:var(--text);border-radius:14px;padding:22px 22px 20px;
+  box-shadow:0 14px 40px rgba(3,20,48,.35);
+}
+.apply-box h3{margin:0 0 4px;font-size:17px;color:var(--blue-900);letter-spacing:-.4px}
+.apply-box .sub{margin:0 0 14px;font-size:13.5px;color:var(--muted)}
+.apply-box ol{margin:0 0 16px;padding:0;list-style:none;counter-reset:mini}
+.apply-box li{
+  counter-increment:mini;display:flex;gap:10px;align-items:flex-start;
+  padding:8px 0;border-top:1px dashed var(--line);font-size:14px;color:#2c3a4b;
+}
+.apply-box li:first-child{border-top:0}
+.apply-box li::before{
+  content:counter(mini);flex:none;width:22px;height:22px;border-radius:50%;
+  background:var(--blue-800);color:#fff;font-size:12px;font-weight:700;
+  display:inline-flex;align-items:center;justify-content:center;margin-top:1px;
+}
+.apply-box li b{color:var(--blue-900)}
+.apply-box .btns{display:grid;gap:8px}
+.btn-block{justify-content:center;width:100%}
+.btn-strong{background:var(--blue-800);color:#fff}
+.btn-strong:hover{background:var(--blue-700);text-decoration:none;color:#fff}
+.btn-soft{background:var(--blue-050);color:var(--blue-800);border-color:var(--line)}
+.btn-soft:hover{background:var(--blue-100);text-decoration:none}
+.apply-box .tip{font-size:12.5px;color:var(--muted);margin:10px 0 0;text-align:center;max-width:none}
+.emblem{font-size:11.5px;letter-spacing:-.3px}
+
+.who-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.who{border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;background:#fff;box-shadow:var(--shadow)}
+.who.yes{border-top:4px solid var(--blue-700)}
+.who.no{border-top:4px solid #b9c5d3;background:#fafbfd}
+.who .lbl{display:inline-block;font-size:12px;font-weight:800;padding:3px 10px;border-radius:999px;margin-bottom:10px}
+.who.yes .lbl{background:var(--blue-100);color:var(--blue-800)}
+.who.no .lbl{background:#e9edf2;color:#5d6b7d}
+.who h3{margin:0 0 8px;font-size:17px}
+.who p{margin:0;font-size:14.5px;color:var(--muted)}
+.who ul{margin:10px 0 0;padding-left:18px;font-size:14.5px;color:#2c3a4b}
+.who li{margin:3px 0}
+
+.docs{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.doc{display:flex;gap:16px;border:1px solid var(--line);border-radius:var(--radius);padding:20px;background:#fff;box-shadow:var(--shadow)}
+.doc .no{flex:none;width:44px;height:44px;border-radius:10px;background:var(--blue-800);color:#fff;font-weight:800;font-size:17px;display:flex;align-items:center;justify-content:center}
+.doc h3{margin:0 0 4px;font-size:16px}
+.doc p{margin:0;font-size:14px;color:var(--muted)}
+.doc .meta{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:13px}
+.chip{display:inline-block;background:var(--blue-050);border:1px solid var(--line);border-radius:6px;padding:3px 9px;color:#33465c}
+
+.submit{
+  margin-top:18px;display:grid;grid-template-columns:1.1fr .9fr;gap:0;overflow:hidden;
+  border:1px solid var(--line);border-radius:var(--radius);background:#fff;box-shadow:var(--shadow)
+}
+.submit > div{padding:22px 24px}
+.submit .to{background:var(--blue-900);color:#fff}
+.submit .to h3{margin:0 0 10px;font-size:15px;color:#c9dcf3;font-weight:600;letter-spacing:.2px}
+.submit .to .mail{font-size:22px;font-weight:800;letter-spacing:-.4px;word-break:break-all}
+.submit .to p{margin:8px 0 0;font-size:13.5px;color:#c9dcf3}
+.submit .how h3{margin:0 0 8px;font-size:15.5px;color:var(--blue-900)}
+.submit .how ul{margin:0;padding-left:18px;font-size:14.5px;color:#2c3a4b}
+.submit .how li{margin:4px 0}
+
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:6px}
+.flow .f{border:1px solid var(--line);border-radius:10px;padding:16px;background:#fff;text-align:center}
+.flow .f b{display:block;color:var(--blue-900);font-size:15px;margin-bottom:4px}
+.flow .f span{font-size:13.5px;color:var(--muted)}
+
+.law{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.law .card p{font-size:14px}
+.src{font-size:12.5px;color:#7d8b9c;margin-top:12px}
+
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .flow{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:640px){
+  .who-grid,.docs,.submit,.law{grid-template-columns:1fr}
+  .flow{grid-template-columns:1fr}
+}
+</style>
 </head>
 <body>
 
 <!-- ══════════ 상단 유틸바 ══════════ -->
 <div class="utilbar">
   <div class="wrap">
-    <span>온실가스감축인지 예산제도 지원포털</span>
-    <span>운영시간 09:00 ~ 18:00 (평일)</span>
+    <span>온실가스감축인지 운영시스템(GBMS) 접속 안내</span>
+    <span>문의 032-590-3437, 3469 (평일 09:00~18:00)</span>
   </div>
 </div>
 
@@ -21,16 +102,17 @@
 <header>
   <div class="wrap head-inner">
     <div class="brand">
-      <div class="emblem">GHG</div>
+      <div class="emblem">GBMS</div>
       <a href="index.html">
-        <b>온실가스감축인지 예산서 작성 지원</b>
-        <small>행정망(SSL VPN) 접근 신청 안내</small>
+        <b>온실가스감축인지 운영시스템</b>
+        <small>산하기관·기술자문위원 접속(SSL VPN) 신청 안내</small>
       </a>
     </div>
     <nav class="gnb">
-      <a href="#intro">제도 소개</a>
       <a href="#apply">신청 절차</a>
-      <a href="#install">설치 안내</a>
+      <a href="#docs">제출 서류</a>
+      <a href="#access">접속 방법</a>
+      <a href="#intro">제도 소개</a>
       <a href="#notice">공지사항</a>
       <a href="#files">자료실</a>
       <a href="#faq">FAQ</a>
@@ -38,204 +120,263 @@
   </div>
 </header>
 
-<!-- ══════════ 히어로 ══════════ -->
+<!-- ══════════ 히어로: 신청이 핵심 ══════════ -->
 <div class="hero">
-  <div class="wrap">
-    <span class="tag">2027회계연도 예산안 편성 지원</span>
-    <h1>온실가스감축인지 예산서 작성을 위한<br>행정망 접근(SSL VPN) 신청 안내</h1>
-    <p>온실가스감축인지 예산서·기금운용계획서 작성 시스템은 행정망 내부에서만 접속할 수 있습니다.
-       외부망 사용 부서 담당자는 SSL VPN 계정을 신청·발급받아 접속하시기 바랍니다.</p>
-    <div class="hero-btns">
-      <a class="btn btn-primary" href="#apply">신청 절차 바로가기</a>
-      <a class="btn btn-ghost" href="files/form01_vpn_apply.hwpx" download>신청서 서식 내려받기</a>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="tag">산하기관 · 기술자문위원 전용</span>
+      <h1>온실가스감축인지 운영시스템<br>접속을 위한 SSL VPN 신청</h1>
+      <p>온실가스감축인지 운영시스템은 행정망에서 운영됩니다. 산하기관 사업담당자와 기술자문위원은
+         <b>SSL VPN</b>을 통해서만 접속할 수 있으므로, 아래 절차에 따라 먼저 접속 신청을 해 주시기 바랍니다.</p>
+      <div class="hero-btns">
+        <a class="btn btn-primary" href="files/form01_vpn_apply.hwpx" download>신청서 내려받기 (HWPX)</a>
+        <a class="btn btn-ghost" href="#apply">신청 절차 자세히 보기</a>
+      </div>
     </div>
+
+    <aside class="apply-box" aria-label="신청 요약">
+      <h3>신청은 이렇게 진행됩니다</h3>
+      <p class="sub">서류 2종을 이메일로 보내면, 확인 후 접속 프로그램을 보내드립니다.</p>
+      <ol>
+        <li><span><b>신청서 작성</b> — 아래 서식(HWPX)을 내려받아 작성</span></li>
+        <li><span><b>재직증명서 준비</b> — 소속기관 발급본</span></li>
+        <li><span><b>이메일 제출</b> — 두 서류를 담당자 메일로 발송</span></li>
+        <li><span><b>서류 확인</b> — 담당자가 신청 내용·재직 여부 확인</span></li>
+        <li><span><b>SSL VPN 클라이언트 수령</b> — 설치 파일·접속정보 회신</span></li>
+        <li><span><b>접속</b> — VPN 연결 후 시스템 접속</span></li>
+      </ol>
+      <div class="btns">
+        <a class="btn btn-strong btn-block" href="files/form01_vpn_apply.hwpx" download>① 신청서 서식 내려받기</a>
+        <a class="btn btn-soft btn-block" href="#docs">② 제출 서류·제출처 확인</a>
+      </div>
+      <p class="tip">신청서는 한글(HWPX) 서식입니다. 한컴오피스 한글 2014 이상에서 열 수 있습니다.</p>
+    </aside>
   </div>
 </div>
 
-<!-- ══════════ 제도 소개 ══════════ -->
+<!-- ══════════ 누가 신청하나 ══════════ -->
+<section id="who">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">WHO</div>
+      <h2>누가 신청해야 하나요?</h2>
+      <p>회원 유형에 따라 접속 경로가 다릅니다. 행정망을 사용하지 않는 외부 사용자만 SSL VPN 신청 대상입니다.</p>
+    </div>
+    <div class="who-grid">
+      <div class="who yes">
+        <span class="lbl">신청 대상</span>
+        <h3>산하기관 사업담당자 · 기술자문위원</h3>
+        <p>행정망이 없는 기관·개인은 SSL VPN으로만 시스템에 접속할 수 있습니다.</p>
+        <ul>
+          <li><b>산하기관 사업담당자</b> — 소관 세부사업의 온실가스감축인지 예산서·결산서 사업별 자료 작성</li>
+          <li><b>기술자문위원</b> — 감축사업 분류·감축효과 분석 등에 대한 자문의견 등록</li>
+        </ul>
+      </div>
+      <div class="who no">
+        <span class="lbl">신청 불필요</span>
+        <h3>중앙관서(부처) 담당자 · 운영기관</h3>
+        <p>행정망 PC에서 시스템 주소로 직접 접속합니다. 회원가입 시 GPKI 인증서를 사용합니다.</p>
+        <ul>
+          <li>부처 총괄담당·사업담당, 제도운영자(기획예산처·기후에너지환경부)</li>
+          <li>시스템운영자·기후기금담당(한국환경공단)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 신청 절차 ══════════ -->
+<section id="apply" style="background:var(--blue-050)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">PROCESS</div>
+      <h2>SSL VPN 접속 신청 절차</h2>
+      <p>신청서와 재직증명서 <b>2종</b>을 이메일로 제출하면, 담당자가 확인한 뒤 접속 프로그램을 보내드립니다. 별도의 방문·공문 절차는 없습니다.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <div class="num"></div>
+        <h4>신청서 내려받기 · 작성</h4>
+        <p>「SSL VPN 접속 신청서(서식 제1호)」를 내려받아 소속기관·부서·직위·성명·연락처·이메일, 회원유형, 사용목적·기간, 접속 PC 정보를 기재하고 소속기관 확인란을 채웁니다.</p>
+        <span class="who">신청인</span>
+      </div>
+      <div class="step">
+        <div class="num"></div>
+        <h4>재직증명서 준비</h4>
+        <p>소속기관에서 발급한 재직증명서를 준비합니다. 스캔본(PDF·이미지)도 가능합니다. 기술자문위원은 소속 기관·학교 발급본을 첨부합니다.</p>
+        <span class="who">신청인</span>
+      </div>
+      <div class="step">
+        <div class="num"></div>
+        <h4>이메일 제출</h4>
+        <p>작성한 신청서와 재직증명서를 아래 <a href="#docs">제출처</a> 이메일로 보냅니다. 메일 제목은 「[GBMS VPN 신청] 기관명_성명」으로 적어 주세요.</p>
+        <span class="who">신청인 → 담당자</span>
+      </div>
+      <div class="step">
+        <div class="num"></div>
+        <h4>서류 확인</h4>
+        <p>담당자가 신청 내용과 재직 여부를 확인합니다. 기재 누락·불일치가 있으면 회신 메일로 보완을 요청합니다.</p>
+        <span class="who">한국환경공단 담당자</span>
+      </div>
+      <div class="step">
+        <div class="num"></div>
+        <h4>SSL VPN 클라이언트 발송</h4>
+        <p>확인이 끝나면 SSL VPN 클라이언트 설치 파일과 접속 계정 안내를 신청서에 기재한 이메일로 보내드립니다.</p>
+        <span class="who">담당자 → 신청인</span>
+      </div>
+      <div class="step">
+        <div class="num"></div>
+        <h4>VPN 연결 후 시스템 접속</h4>
+        <p>클라이언트를 설치하고 VPN에 연결한 뒤 운영시스템에 접속합니다. 처음 접속하는 경우 회원가입 후 승인을 받아 이용합니다.</p>
+        <span class="who">신청인</span>
+      </div>
+    </div>
+
+    <div style="height:18px"></div>
+    <div class="note">
+      <b>유의</b>&nbsp; SSL VPN 계정은 신청인 본인만 사용할 수 있으며, 여러 사람이 같은 계정으로 동시에 접속할 수 없습니다.
+      소속·담당자가 바뀐 경우에는 새 담당자가 다시 신청해 주시기 바랍니다.
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 제출 서류 · 제출처 ══════════ -->
+<section id="docs">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">DOCUMENTS</div>
+      <h2>제출 서류 및 제출처</h2>
+      <p>제출 서류는 아래 2종입니다. 두 파일을 한 통의 메일에 첨부해 보내 주세요.</p>
+    </div>
+
+    <div class="docs">
+      <div class="doc">
+        <div class="no">1</div>
+        <div>
+          <h3>SSL VPN 접속 신청서 (서식 제1호)</h3>
+          <p>본 페이지에서 내려받는 한글(HWPX) 서식입니다. 신청인 정보, 회원유형, 사용목적·기간, 접속 PC 정보, 보안 준수 서약, 소속기관 확인란으로 구성되어 있습니다.</p>
+          <div class="meta">
+            <span class="chip">HWPX</span><span class="chip">필수</span>
+            <a class="dl" href="files/form01_vpn_apply.hwpx" download>서식 내려받기 →</a>
+          </div>
+        </div>
+      </div>
+      <div class="doc">
+        <div class="no">2</div>
+        <div>
+          <h3>재직증명서</h3>
+          <p>신청인이 신청서에 기재한 기관에 재직 중임을 확인하는 서류입니다. 소속기관에서 발급한 원본의 스캔본(PDF 또는 이미지)을 첨부합니다.</p>
+          <div class="meta">
+            <span class="chip">PDF · 이미지</span><span class="chip">필수</span>
+            <span style="color:var(--muted)">소속기관 발급</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="submit">
+      <div class="to">
+        <h3>제출처 (이메일)</h3>
+        <div class="mail">gbms-apply@example.or.kr</div>
+        <p>한국환경공단 탄소예산지원부 &nbsp;|&nbsp; 032-590-3437, 3469</p>
+        <p style="color:#9db6d3;font-size:12.5px">※ 이메일 주소는 운영 개시 전 확정되어 교체될 예정입니다.</p>
+      </div>
+      <div class="how">
+        <h3>메일 작성 요령</h3>
+        <ul>
+          <li>제목: <b>[GBMS VPN 신청] 기관명_성명</b></li>
+          <li>첨부: 신청서(HWPX 또는 PDF) + 재직증명서</li>
+          <li>본문에 연락 가능한 전화번호를 함께 적어 주세요.</li>
+          <li>회신(클라이언트 발송)은 신청서에 적은 이메일로 드립니다.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 접속 방법 ══════════ -->
+<section id="access" style="background:var(--blue-050)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">ACCESS</div>
+      <h2>승인 후 접속 방법</h2>
+      <p>담당자로부터 SSL VPN 클라이언트를 받은 뒤의 순서입니다. 세부 설치 화면은 회신 메일에 첨부되는 안내를 따릅니다.</p>
+    </div>
+    <div class="flow">
+      <div class="f"><b>① 클라이언트 설치</b><span>회신 메일의 설치 파일을 실행하여 SSL VPN 클라이언트를 설치</span></div>
+      <div class="f"><b>② VPN 연결</b><span>안내받은 접속 계정으로 VPN에 연결</span></div>
+      <div class="f"><b>③ 시스템 접속</b><span>VPN 연결 상태에서 운영시스템 주소로 접속</span></div>
+      <div class="f"><b>④ 회원가입 · 로그인</b><span>최초 접속 시 회원가입 후 승인을 받아 로그인</span></div>
+    </div>
+    <div style="height:18px"></div>
+    <div class="note">
+      <b>보안 안내</b><br>
+      · 로그인 5회 연속 실패 시 계정이 잠기며, 동일 계정의 동시 로그인은 차단됩니다.<br>
+      · 시스템에서 취급하는 자료는 업무 목적 외로 외부에 반출·공유할 수 없습니다.<br>
+      · 사용 목적이 끝났거나 담당자가 바뀐 경우 담당자에게 알려 계정을 정리해 주시기 바랍니다.
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 제도 소개 (간략) ══════════ -->
 <section id="intro">
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">ABOUT</div>
-      <h2>온실가스감축인지 예산제도란?</h2>
-      <p>국가 재정이 온실가스 배출·감축에 미치는 영향을 사전에 분석하고, 그 결과를 예산 편성과 집행에 반영하는 제도입니다.</p>
+      <h2>온실가스감축인지 예산제도와 운영시스템</h2>
+      <p>국가 예산이 온실가스 감축에 미칠 영향을 분석하여 그 결과를 예산 편성에 반영하고, 결산 시 적정하게 집행되었는지를 평가하여 환류하는 제도입니다.</p>
     </div>
 
     <div class="grid grid-3">
       <div class="card">
         <div class="ico">근거</div>
         <h3>법적 근거</h3>
-        <p>「국가재정법」 제27조(온실가스감축인지 예산서의 작성) 및 「기후위기 대응을 위한 탄소중립·녹색성장 기본법」 제24조에 따라 시행됩니다.</p>
+        <p>「기후위기 대응을 위한 탄소중립·녹색성장 기본법」 제24조<br>「국가재정법」 제27조·제68조의3(예산서·기금운용계획서), 제57조의2·제73조의3(결산서·기금결산서)</p>
       </div>
       <div class="card">
-        <div class="ico">대상</div>
-        <h3>작성 대상</h3>
-        <p>중앙관서의 장 및 기금관리주체는 소관 대상사업에 대하여 예산서·기금운용계획서와 결산서를 함께 작성·제출하여야 합니다.</p>
+        <div class="ico">체계</div>
+        <h3>추진 체계</h3>
+        <p>기획예산처(총괄·예산), 재정경제부(결산), 기후에너지환경부(협조), 한국환경공단(전문기관). 각 부처는 세부사업 단위로 사업별 설명자료를 작성하여 예·결산서를 제출합니다.</p>
       </div>
       <div class="card">
-        <div class="ico">산출</div>
-        <h3>주요 산출물</h3>
-        <p>대상사업별 온실가스 감축 목표, 감축 효과 추정치, 성과지표 및 전년도 집행 결과 분석 내용을 담은 예산서를 작성합니다.</p>
+        <div class="ico" style="width:auto;padding:0 10px">시스템</div>
+        <h3>운영시스템의 역할</h3>
+        <p>부처·산하기관이 온실가스감축인지 예산서·결산서를 작성·제출하고, 기술자문위원이 자문의견을 등록하며, 전문기관이 검토·통계를 수행하는 행정망 기반 시스템입니다.</p>
       </div>
     </div>
 
-    <div style="height:24px"></div>
-
+    <div style="height:22px"></div>
     <div class="tbl-wrap">
       <table>
-        <caption>2027회계연도 예산서 작성 주요 일정(안)</caption>
+        <caption>연간 운영 흐름 (국가 예산·기금 편성 및 결산 절차 기준)</caption>
         <thead>
-          <tr><th style="width:130px">구분</th><th style="width:170px">기간</th><th>주요 내용</th><th style="width:150px">담당</th></tr>
+          <tr><th style="width:110px">구분</th><th style="width:150px">시기</th><th>주요 내용</th><th style="width:200px">주체</th></tr>
         </thead>
         <tbody>
-          <tr><td>1단계</td><td>2027. 02. 09 ~ 02. 27</td><td class="subj">대상사업 선정 및 부처 통보</td><td>총괄기관</td></tr>
-          <tr><td>2단계</td><td>2027. 03. 02 ~ 03. 20</td><td class="subj">담당자 지정 · 행정망(SSL VPN) 계정 신청</td><td>각 부처</td></tr>
-          <tr><td>3단계</td><td>2027. 03. 23 ~ 05. 08</td><td class="subj">예산서 작성시스템 입력 및 1차 제출</td><td>각 부처</td></tr>
-          <tr><td>4단계</td><td>2027. 05. 11 ~ 06. 12</td><td class="subj">검토·보완 요청 및 수정 반영</td><td>총괄기관 · 각 부처</td></tr>
-          <tr><td>5단계</td><td>2027. 06. 15 ~ 06. 30</td><td class="subj">최종본 확정 및 기획재정부 제출</td><td>총괄기관</td></tr>
+          <tr><td rowspan="3">예산서</td><td>3월 31일까지</td><td class="subj">온실가스감축인지 예산서 및 기금운용계획서 작성지침 통보</td><td>기획예산처 → 각 부처</td></tr>
+          <tr><td>5월 31일까지</td><td class="subj">대상사업 선정·예산서 작성·제출 (교육·컨설팅 지원)</td><td>각 부처 → 기획예산처 / 한국환경공단</td></tr>
+          <tr><td>6~8월</td><td class="subj">예산서 검토 후 회계연도 개시 120일 전까지 국회 제출</td><td>기획예산처·기후에너지환경부·한국환경공단</td></tr>
+          <tr><td rowspan="2">결산서</td><td>2월 말일까지</td><td class="subj">온실가스감축인지 결산서 및 기금결산서 작성·제출</td><td>각 부처 → 재정경제부</td></tr>
+          <tr><td>5월 31일까지</td><td class="subj">결산 검토 후 국가결산보고서 부속서류로 국회 제출</td><td>재정경제부 → 국회</td></tr>
         </tbody>
       </table>
     </div>
-
-    <div style="height:18px"></div>
-    <div class="note">
-      <b>참고</b> &nbsp;예산서 작성시스템(디지털예산회계시스템 연계)은 <b>행정망 전용</b>으로 운영됩니다.
-      인터넷망 PC에서는 접속되지 않으며, 반드시 SSL VPN 계정을 발급받아 접속하셔야 합니다.
-    </div>
+    <p class="src">출처: 「2027년 온실가스감축인지 예산서 및 기금운용계획서 작성지침」(2026. 4.) Part Ⅰ 제도 개요, 「2025년 온실가스감축인지 결산서 및 기금결산서 작성지침」(2026. 1.)</p>
   </div>
 </section>
 
-<!-- ══════════ 신청 절차 ══════════ -->
-<section id="apply">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">PROCESS</div>
-      <h2>SSL VPN 접근 신청 절차</h2>
-      <p>신청서 접수부터 계정 발급까지 통상 <b>3~5 근무일</b>이 소요됩니다. 여유를 두고 신청해 주시기 바랍니다.</p>
-    </div>
-
-    <div class="steps">
-      <div class="step">
-        <div class="num"></div>
-        <h4>신청서 작성</h4>
-        <p>자료실의 「행정망 SSL VPN 사용 신청서(서식 제1호)」를 내려받아 소속·직위·성명·연락처·사용 목적을 기재합니다.</p>
-        <span class="who">신청인</span>
-      </div>
-      <div class="step">
-        <div class="num"></div>
-        <h4>부서장 결재</h4>
-        <p>업무 필요성 확인 후 부서장 결재를 받고, 보안서약서(서식 제2호)를 함께 작성합니다.</p>
-        <span class="who">소속 부서</span>
-      </div>
-      <div class="step">
-        <div class="num"></div>
-        <h4>정보보안 담당 검토</h4>
-        <p>기관 정보보안 담당자가 사용 목적·기간의 적정성과 단말기 보안 요건 충족 여부를 확인합니다.</p>
-        <span class="who">정보보안 담당</span>
-      </div>
-      <div class="step">
-        <div class="num"></div>
-        <h4>총괄기관 접수</h4>
-        <p>결재 완료 문서를 공문 또는 전자우편(ghg-budget@example.go.kr)으로 지원단에 제출합니다.</p>
-        <span class="who">신청 부서 → 지원단</span>
-      </div>
-      <div class="step">
-        <div class="num"></div>
-        <h4>계정 발급</h4>
-        <p>심사 후 계정 ID와 초기 비밀번호, OTP 등록 안내를 개별 문자·메일로 통보합니다.</p>
-        <span class="who">지원단</span>
-      </div>
-      <div class="step">
-        <div class="num"></div>
-        <h4>설치 및 접속 확인</h4>
-        <p>아래 설치 안내에 따라 VPN 클라이언트를 설치하고, 예산서 작성시스템 접속을 확인합니다.</p>
-        <span class="who">신청인</span>
-      </div>
-    </div>
-
-    <div style="height:24px"></div>
-
-    <div class="tbl-wrap">
-      <table>
-        <caption>제출 서류 목록</caption>
-        <thead>
-          <tr><th style="width:70px">순번</th><th>제출 서류</th><th style="width:130px">서식</th><th style="width:110px">필수 여부</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>1</td><td class="subj">행정망 SSL VPN 사용 신청서</td><td>서식 제1호</td><td>필수</td></tr>
-          <tr><td>2</td><td class="subj">정보보안 서약서</td><td>서식 제2호</td><td>필수</td></tr>
-          <tr><td>3</td><td class="subj">업무 담당자 지정 공문 사본</td><td>기관 서식</td><td>필수</td></tr>
-          <tr><td>4</td><td class="subj">단말기 보안점검 확인서</td><td>서식 제3호</td><td>해당 시</td></tr>
-          <tr><td>5</td><td class="subj">사용 기간 연장 신청서</td><td>서식 제4호</td><td>연장 시</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════ 설치 안내 ══════════ -->
-<section id="install">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">INSTALL</div>
-      <h2>SSL VPN 설치 및 접속 안내</h2>
-      <p>계정을 발급받은 후 아래 순서대로 클라이언트를 설치하고 접속하시기 바랍니다.</p>
-    </div>
-
-    <div class="grid grid-2">
-      <div class="card">
-        <h3>설치 순서</h3>
-        <p style="color:#3a4859">
-          ① 인터넷망 PC에서 <b>https://vpn.ghg-budget.go.kr</b> 접속<br>
-          ② 발급받은 ID·초기 비밀번호로 로그인<br>
-          ③ 클라이언트 설치 파일 자동 다운로드 → <b>관리자 권한</b>으로 실행<br>
-          ④ 설치 완료 후 PC 재시작<br>
-          ⑤ OTP 앱 등록(QR 스캔) 및 초기 비밀번호 변경<br>
-          ⑥ VPN 연결 후 예산서 작성시스템 접속 확인
-        </p>
-      </div>
-      <div class="card">
-        <h3>이용 환경</h3>
-        <div class="tbl-wrap" style="border:0">
-          <table style="min-width:0">
-            <tbody>
-              <tr><td style="text-align:left;width:120px;color:var(--muted)">운영체제</td><td class="subj">Windows 10 / 11, macOS 13 이상</td></tr>
-              <tr><td style="text-align:left;color:var(--muted)">브라우저</td><td class="subj">Chrome, Edge 최신 버전</td></tr>
-              <tr><td style="text-align:left;color:var(--muted)">인증 방식</td><td class="subj">ID/PW + OTP 2단계 인증</td></tr>
-              <tr><td style="text-align:left;color:var(--muted)">동시 접속</td><td class="subj">계정당 1대</td></tr>
-              <tr><td style="text-align:left;color:var(--muted)">세션 시간</td><td class="subj">최대 8시간(30분 무동작 시 종료)</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-
-    <div style="height:18px"></div>
-    <div class="note">
-      <b>보안 유의사항</b><br>
-      · 계정은 신청인 본인만 사용하며, 타인에게 대여·공유할 수 없습니다.<br>
-      · 비밀번호 5회 연속 오류 시 계정이 잠기며, 지원단에 잠금 해제를 요청해야 합니다.<br>
-      · 90일 이상 미접속 계정은 자동으로 사용 정지되며, 사용 기간 만료 시 즉시 회수됩니다.<br>
-      · 업무 자료의 외부 반출·개인 저장매체 저장은 금지되며, 위반 시 계정이 회수될 수 있습니다.
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════════════
-     게시판 ① 공지사항
-     · 제목의 링크 주소 view.html?b=notice&id=△△ 의
-       id 값이 view.html 안의 데이터와 짝을 이룹니다.
-     ══════════════════════════════════════════════ -->
-<section id="notice">
+<!-- ══════════ 공지사항 ══════════ -->
+<section id="notice" style="background:var(--blue-050)">
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">NOTICE</div>
       <h2>공지사항</h2>
-      <p>제도 운영 및 시스템 이용에 관한 안내 사항입니다.</p>
+      <p>접속 신청 및 시스템 이용에 관한 안내입니다.</p>
     </div>
 
     <div class="board-top">
-      <div class="cnt">전체 <b>12</b>건 / 1페이지</div>
+      <div class="cnt">전체 <b>5</b>건 / 1페이지</div>
     </div>
 
     <div class="tbl-wrap">
@@ -244,7 +385,7 @@
           <tr>
             <th style="width:70px">번호</th>
             <th>제목</th>
-            <th style="width:150px">작성자</th>
+            <th style="width:170px">작성자</th>
             <th style="width:120px">등록일</th>
             <th style="width:80px">조회</th>
           </tr>
@@ -252,89 +393,46 @@
         <tbody>
           <tr class="pin">
             <td>공지</td>
-            <td class="subj"><span class="badge badge-notice">필독</span><a href="view.html?b=notice&id=p1">2027회계연도 온실가스감축인지 예산서 작성지침 시달 안내</a></td>
-            <td>예산총괄과</td><td>2026-09-01</td><td>1,842</td>
-          </tr>
-          <tr class="pin">
-            <td>공지</td>
-            <td class="subj"><span class="badge badge-notice">필독</span><a href="view.html?b=notice&id=p2">행정망 SSL VPN 사용 신청 접수 안내(~9. 30.)</a></td>
-            <td>정보화담당관</td><td>2026-08-28</td><td>1,517</td>
-          </tr>
-          <tr>
-            <td>10</td>
-            <td class="subj"><span class="badge badge-new">NEW</span><a href="view.html?b=notice&id=10">예산서 작성시스템 정기 점검에 따른 서비스 일시 중단 안내(9. 12. 18:00~22:00)</a></td>
-            <td>시스템운영팀</td><td>2026-09-05</td><td>412</td>
-          </tr>
-          <tr>
-            <td>9</td>
-            <td class="subj"><span class="badge badge-new">NEW</span><a href="view.html?b=notice&id=9">부처 담당자 대상 예산서 작성 실무교육(온라인) 신청 안내</a></td>
-            <td>제도운영팀</td><td>2026-09-03</td><td>688</td>
-          </tr>
-          <tr>
-            <td>8</td>
-            <td class="subj"><a href="view.html?b=notice&id=8">VPN 클라이언트 v3.2.1 업데이트 및 재설치 요청</a></td>
-            <td>정보화담당관</td><td>2026-08-24</td><td>935</td>
-          </tr>
-          <tr>
-            <td>7</td>
-            <td class="subj"><a href="view.html?b=notice&id=7">2027년 온실가스감축인지 예산 대상사업 확정 통보</a></td>
-            <td>예산총괄과</td><td>2026-08-14</td><td>2,106</td>
-          </tr>
-          <tr>
-            <td>6</td>
-            <td class="subj"><a href="view.html?b=notice&id=6">감축효과 산정 방법론 개정(제3판) 적용 안내</a></td>
-            <td>분석지원팀</td><td>2026-07-31</td><td>1,274</td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td class="subj"><a href="view.html?b=notice&id=5">계정 장기 미사용자 사용 정지 예정 안내</a></td>
-            <td>정보화담당관</td><td>2026-07-17</td><td>604</td>
+            <td class="subj"><span class="badge badge-notice">필독</span><a href="view.html?b=notice&id=p1">산하기관·기술자문위원 SSL VPN 접속 신청 안내 (상시 접수)</a></td>
+            <td>탄소예산지원부</td><td>2026-09-01</td><td>412</td>
           </tr>
           <tr>
             <td>4</td>
-            <td class="subj"><a href="view.html?b=notice&id=4">2026회계연도 결산서 작성 결과 및 주요 지적사항 공유</a></td>
-            <td>제도운영팀</td><td>2026-06-30</td><td>1,489</td>
+            <td class="subj"><span class="badge badge-new">NEW</span><a href="view.html?b=notice&id=4">접속 신청서 서식(서식 제1호) 개정 안내 – 접속 PC 정보·소속기관 확인란 추가</a></td>
+            <td>탄소예산지원부</td><td>2026-09-07</td><td>96</td>
           </tr>
           <tr>
             <td>3</td>
-            <td class="subj"><a href="view.html?b=notice&id=3">부처별 담당자 변경 시 계정 이관 절차 안내</a></td>
-            <td>정보화담당관</td><td>2026-06-12</td><td>721</td>
+            <td class="subj"><a href="view.html?b=notice&id=3">담당자 변경 시 접속 계정 처리 안내</a></td>
+            <td>탄소예산지원부</td><td>2026-08-20</td><td>158</td>
           </tr>
           <tr>
             <td>2</td>
-            <td class="subj"><a href="view.html?b=notice&id=2">예산서 작성시스템 사용자 매뉴얼 개정 배포</a></td>
-            <td>시스템운영팀</td><td>2026-05-29</td><td>1,033</td>
+            <td class="subj"><a href="view.html?b=notice&id=2">「2027년 온실가스감축인지 예산서 및 기금운용계획서 작성지침」 자료실 게재</a></td>
+            <td>탄소예산지원부</td><td>2026-05-04</td><td>631</td>
           </tr>
           <tr>
             <td>1</td>
-            <td class="subj"><a href="view.html?b=notice&id=1">온실가스감축인지 예산제도 지원포털 개설 안내</a></td>
-            <td>제도운영팀</td><td>2026-05-04</td><td>1,760</td>
+            <td class="subj"><a href="view.html?b=notice&id=1">온실가스감축인지 운영시스템 접속 안내 페이지 개설</a></td>
+            <td>탄소예산지원부</td><td>2026-04-28</td><td>540</td>
           </tr>
         </tbody>
       </table>
     </div>
-
-    <div class="paging">
-      <span class="on">1</span><a href="#notice">2</a><a href="#notice">3</a><a href="#notice">다음</a>
-    </div>
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════
-     게시판 ② 자료실(첨부파일)
-     · 실제 파일은 files/ 폴더에 올리고
-       다운로드 링크의 href 를 그 경로로 바꾸면 됩니다.
-     ══════════════════════════════════════════════ -->
-<section id="files" style="background:var(--blue-050)">
+<!-- ══════════ 자료실 ══════════ -->
+<section id="files">
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">DOWNLOAD</div>
-      <h2>자료실 · 첨부파일</h2>
-      <p>신청 서식, 설치 매뉴얼, 작성지침 등을 내려받으실 수 있습니다. 자료명을 클릭하면 상세 내용을 볼 수 있습니다.</p>
+      <h2>자료실</h2>
+      <p>신청 서식과 참고 자료를 내려받을 수 있습니다. 자료명을 클릭하면 설명을 볼 수 있습니다.</p>
     </div>
 
     <div class="board-top">
-      <div class="cnt">전체 <b>9</b>건 / 1페이지</div>
+      <div class="cnt">전체 <b>4</b>건 / 1페이지</div>
     </div>
 
     <div class="tbl-wrap">
@@ -344,78 +442,43 @@
             <th style="width:70px">번호</th>
             <th>자료명</th>
             <th style="width:100px">형식</th>
-            <th style="width:90px">용량</th>
             <th style="width:120px">등록일</th>
             <th style="width:90px">다운로드</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>9</td>
-            <td class="subj"><span class="badge badge-file">서식</span><a href="view.html?b=data&id=9">[서식 제1호] 행정망 SSL VPN 사용 신청서</a></td>
-            <td><span class="ext hwp">HWPX</span></td><td>34 KB</td><td>2026-08-28</td>
+            <td>4</td>
+            <td class="subj"><span class="badge badge-file">서식</span><a href="view.html?b=data&id=4">[서식 제1호] 온실가스감축인지 운영시스템 SSL VPN 접속 신청서</a></td>
+            <td><span class="ext hwp">HWPX</span></td><td>2026-09-07</td>
             <td><a class="dl" href="files/form01_vpn_apply.hwpx" download>받기</a></td>
           </tr>
           <tr>
-            <td>8</td>
-            <td class="subj"><span class="badge badge-file">서식</span><a href="view.html?b=data&id=8">[서식 제2호] 정보보안 서약서</a></td>
-            <td><span class="ext hwp">HWP</span></td><td>52 KB</td><td>2026-08-28</td>
-            <td><a class="dl na" href="view.html?b=data&id=8">받기</a></td>
-          </tr>
-          <tr>
-            <td>7</td>
-            <td class="subj"><span class="badge badge-file">서식</span><a href="view.html?b=data&id=7">[서식 제3호] 단말기 보안점검 확인서</a></td>
-            <td><span class="ext hwp">HWP</span></td><td>47 KB</td><td>2026-08-28</td>
-            <td><a class="dl na" href="view.html?b=data&id=7">받기</a></td>
-          </tr>
-          <tr>
-            <td>6</td>
-            <td class="subj"><a href="view.html?b=data&id=6">SSL VPN 설치 매뉴얼(Windows)</a></td>
-            <td><span class="ext pdf">PDF</span></td><td>4.1 MB</td><td>2026-08-24</td>
-            <td><a class="dl na" href="view.html?b=data&id=6">받기</a></td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td class="subj"><a href="view.html?b=data&id=5">SSL VPN 설치 매뉴얼(macOS)</a></td>
-            <td><span class="ext pdf">PDF</span></td><td>3.6 MB</td><td>2026-08-24</td>
-            <td><a class="dl na" href="view.html?b=data&id=5">받기</a></td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td class="subj"><a href="view.html?b=data&id=4">2027회계연도 온실가스감축인지 예산서 작성지침</a></td>
-            <td><span class="ext pdf">PDF</span></td><td>7.8 MB</td><td>2026-09-01</td>
-            <td><a class="dl na" href="view.html?b=data&id=4">받기</a></td>
-          </tr>
-          <tr>
             <td>3</td>
-            <td class="subj"><a href="view.html?b=data&id=3">감축효과 산정 방법론(제3판)</a></td>
-            <td><span class="ext pdf">PDF</span></td><td>5.2 MB</td><td>2026-07-31</td>
-            <td><a class="dl na" href="view.html?b=data&id=3">받기</a></td>
+            <td class="subj"><a href="view.html?b=data&id=3">SSL VPN 접속 신청 안내문 (신청 절차 요약)</a></td>
+            <td><span class="ext pdf">PDF</span></td><td>2026-09-01</td>
+            <td><a class="dl na" href="view.html?b=data&id=3">준비중</a></td>
           </tr>
           <tr>
             <td>2</td>
-            <td class="subj"><a href="view.html?b=data&id=2">대상사업 목록 및 성과지표 예시(2027)</a></td>
-            <td><span class="ext xlsx">XLSX</span></td><td>1.3 MB</td><td>2026-08-14</td>
-            <td><a class="dl na" href="view.html?b=data&id=2">받기</a></td>
+            <td class="subj"><a href="view.html?b=data&id=2">2027년 온실가스감축인지 예산서 및 기금운용계획서 작성지침</a></td>
+            <td><span class="ext pdf">PDF</span></td><td>2026-05-04</td>
+            <td><a class="dl na" href="view.html?b=data&id=2">준비중</a></td>
           </tr>
           <tr>
             <td>1</td>
-            <td class="subj"><a href="view.html?b=data&id=1">예산서 작성시스템 사용자 매뉴얼(전체본)</a></td>
-            <td><span class="ext zip">ZIP</span></td><td>12.4 MB</td><td>2026-05-29</td>
-            <td><a class="dl na" href="view.html?b=data&id=1">받기</a></td>
+            <td class="subj"><a href="view.html?b=data&id=1">2025년 온실가스감축인지 결산서 및 기금결산서 작성지침</a></td>
+            <td><span class="ext pdf">PDF</span></td><td>2026-04-28</td>
+            <td><a class="dl na" href="view.html?b=data&id=1">준비중</a></td>
           </tr>
         </tbody>
       </table>
-    </div>
-
-    <div class="paging">
-      <span class="on">1</span><a href="#files">2</a><a href="#files">다음</a>
     </div>
   </div>
 </section>
 
 <!-- ══════════ FAQ ══════════ -->
-<section id="faq">
+<section id="faq" style="background:var(--blue-050)">
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">FAQ</div>
@@ -423,24 +486,28 @@
     </div>
 
     <details open>
-      <summary>계정 발급까지 얼마나 걸리나요?</summary>
-      <p>서류가 모두 갖춰진 경우 접수일로부터 3~5 근무일이 소요됩니다. 서류 보완이 필요하면 담당자가 개별 연락드립니다.</p>
+      <summary>부처(중앙관서) 담당자인데 신청해야 하나요?</summary>
+      <p>아닙니다. 부처 담당자는 행정망 PC에서 시스템에 직접 접속합니다. SSL VPN 신청은 행정망이 없는 산하기관 사업담당자와 기술자문위원만 대상입니다.</p>
     </details>
     <details>
-      <summary>개인 노트북에서도 접속할 수 있나요?</summary>
-      <p>기관에서 관리하는 업무용 단말기만 허용됩니다. 개인 소유 단말기는 보안점검 확인서를 제출하고 별도 승인을 받은 경우에 한해 예외적으로 허용될 수 있습니다.</p>
+      <summary>재직증명서는 왜 필요한가요?</summary>
+      <p>신청서에 기재한 기관에 실제 재직 중인 담당자인지 확인하기 위한 것입니다. 행정망 외부에서 접속하는 계정이므로, 소속기관이 확인된 사람에게만 접속 프로그램을 발송합니다.</p>
     </details>
     <details>
-      <summary>담당자가 바뀌었습니다. 계정을 넘겨줘도 되나요?</summary>
-      <p>계정 양도는 불가합니다. 기존 담당자는 사용 종료 신청을, 신규 담당자는 신규 신청을 각각 제출해 주시기 바랍니다.</p>
+      <summary>신청 후 얼마나 걸리나요?</summary>
+      <p>서류에 문제가 없으면 담당자가 확인한 뒤 신청서에 기재한 이메일로 SSL VPN 클라이언트를 보내드립니다. 보완이 필요한 경우 회신 메일로 개별 안내합니다.</p>
     </details>
     <details>
-      <summary>VPN은 연결되는데 작성시스템에 접속되지 않습니다.</summary>
-      <p>계정 권한이 시스템에 반영되기까지 최대 1시간이 걸릴 수 있습니다. 1시간 경과 후에도 동일하면 접속 오류 화면을 캡처하여 지원단으로 문의해 주세요.</p>
+      <summary>같은 기관의 여러 명이 한 계정을 함께 쓸 수 있나요?</summary>
+      <p>불가합니다. 계정은 신청인 본인만 사용할 수 있고, 동일 계정의 동시 로그인은 차단됩니다. 사용자별로 각각 신청해 주세요.</p>
     </details>
     <details>
-      <summary>사용 기간이 만료되면 어떻게 되나요?</summary>
-      <p>만료일 7일 전 안내 메일이 발송되며, 계속 사용하려면 사용 기간 연장 신청서(서식 제4호)를 제출해야 합니다. 만료 후에는 계정이 자동 회수됩니다.</p>
+      <summary>담당자가 바뀌었습니다. 어떻게 해야 하나요?</summary>
+      <p>새 담당자가 신청서와 재직증명서를 다시 제출해 주시고, 메일 본문에 이전 담당자 성명을 함께 적어 주시면 기존 계정을 정리합니다.</p>
+    </details>
+    <details>
+      <summary>VPN은 연결되는데 시스템에 로그인이 되지 않습니다.</summary>
+      <p>최초 접속이라면 회원가입 후 운영자 승인이 필요합니다. 승인 이후에도 로그인이 되지 않거나 비밀번호 5회 오류로 계정이 잠긴 경우 아래 문의처로 연락해 주세요.</p>
     </details>
   </div>
 </section>
@@ -454,27 +521,27 @@
     </div>
     <div class="grid grid-3">
       <div class="card">
-        <h3>제도 · 예산서 작성</h3>
+        <h3>접속 신청 · 시스템 이용</h3>
         <dl>
-          <dt>담당</dt><dd>제도운영팀</dd>
-          <dt>전화</dt><dd>044-000-1234</dd>
-          <dt>이메일</dt><dd>ghg-budget@example.go.kr</dd>
+          <dt>기관</dt><dd>한국환경공단 (전문기관)</dd>
+          <dt>부서</dt><dd>탄소예산지원부</dd>
+          <dt>전화</dt><dd>032-590-3437, 3469</dd>
         </dl>
       </div>
       <div class="card">
-        <h3>계정 신청 · VPN</h3>
+        <h3>제도 총괄 (예산)</h3>
         <dl>
-          <dt>담당</dt><dd>정보화담당관</dd>
-          <dt>전화</dt><dd>044-000-1250</dd>
-          <dt>이메일</dt><dd>vpn-help@example.go.kr</dd>
+          <dt>기관</dt><dd>기획예산처</dd>
+          <dt>부서</dt><dd>기후에너지환경예산과</dd>
+          <dt>전화</dt><dd>044-214-2571</dd>
         </dl>
       </div>
       <div class="card">
-        <h3>시스템 장애 신고</h3>
+        <h3>제도 협조</h3>
         <dl>
-          <dt>담당</dt><dd>시스템운영팀</dd>
-          <dt>전화</dt><dd>044-000-1299</dd>
-          <dt>운영</dt><dd>평일 09:00~18:00</dd>
+          <dt>기관</dt><dd>기후에너지환경부</dd>
+          <dt>부서</dt><dd>기후에너지재정과</dd>
+          <dt>전화</dt><dd>044-201-7733</dd>
         </dl>
       </div>
     </div>
@@ -484,10 +551,9 @@
 <!-- ══════════ 푸터 ══════════ -->
 <footer>
   <div class="wrap">
-    <b>온실가스감축인지 예산제도 지원포털</b>
-    <p>(30100) 세종특별자치시 도움6로 000, 정부세종청사 0동</p>
-    <p>대표전화 044-000-1234 &nbsp;|&nbsp; 이메일 ghg-budget@example.go.kr</p>
-    <p style="margin-top:12px;color:#7c99bb">본 페이지의 내용은 안내용 예시이며, 실제 신청 절차는 소관 부처의 공문을 따릅니다.</p>
+    <b>온실가스감축인지 운영시스템(GBMS) 접속 안내</b>
+    <p>한국환경공단 탄소예산지원부 &nbsp;|&nbsp; 전화 032-590-3437, 3469</p>
+    <p style="margin-top:12px;color:#7c99bb">본 페이지는 2차 구축사업 화면설계용 시안입니다. 이메일 주소 등 일부 정보는 운영 개시 전 확정됩니다.</p>
   </div>
 </footer>
 
