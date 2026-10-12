@@ -6,6 +6,8 @@ window.SITE = {
   "emblem": "GBMS",
   "utilbarNote": "온실가스감축인지 운영시스템(GBMS) 접속 안내",
   "org": "한국환경공단 탄소예산지원부",
+  "address": "(22689) 인천광역시 서구 환경로 42 (경서동 종합환경연구단지)",
+  "telMain": "032-590-4000",
   "tel": "032-590-3437, 3469",
   "telHours": "평일 09:00~18:00",
   "email": "gbms-apply@example.or.kr",
