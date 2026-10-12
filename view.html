@@ -54,42 +54,29 @@
 </main>
 
 <footer>
-  <div class="foot-sites">
-    <div class="wrap">
-      <h2 class="sr-only">관련 누리집</h2>
-      <ul>
-        <li><a href="https://www.keco.or.kr/web/index.do" target="_blank" rel="noopener">한국환경공단<span class="sr-only"> (새 창)</span></a></li>
-        <li><a href="https://www.hasudoinfo.or.kr/" target="_blank" rel="noopener">국가하수도정보시스템<span class="sr-only"> (새 창)</span></a></li>
-        <li><a href="https://www.noiseinfo.or.kr/index.jsp" target="_blank" rel="noopener">국가소음정보시스템<span class="sr-only"> (새 창)</span></a></li>
-        <li><a href="https://www.citywaste.or.kr/" target="_blank" rel="noopener">RFID 음식물쓰레기관리시스템<span class="sr-only"> (새 창)</span></a></li>
-        <li><a href="https://www.airkorea.or.kr/web/" target="_blank" rel="noopener">에어코리아<span class="sr-only"> (새 창)</span></a></li>
-        <li><a href="https://ev.or.kr/portal/main" target="_blank" rel="noopener">저공해차 통합정보 누리집<span class="sr-only"> (새 창)</span></a></li>
-        <li><a href="https://www.soosiro.or.kr/index.do" target="_blank" rel="noopener">수시로<span class="sr-only"> (새 창)</span></a></li>
-        <li><a href="https://www.goodlight.or.kr/main.do" target="_blank" rel="noopener">좋은빛 정보센터<span class="sr-only"> (새 창)</span></a></li>
-        <li><a href="https://www.srf-info.or.kr/" target="_blank" rel="noopener">폐자원에너지 종합정보관리시스템<span class="sr-only"> (새 창)</span></a></li>
-      </ul>
-    </div>
-  </div>
   <div class="wrap">
-    <div class="foot-inner">
-      <div class="foot-brand">
-        <div>
-          <b data-site="org"></b>
-          <span data-site="utilbarNote"></span>
-        </div>
-      </div>
-      <div class="foot-info">
-        <address data-site="address"></address>
-        <p><span class="label">문의</span> <span data-site="tel"></span> (<span data-site="telHours"></span>)</p>
-        <p><span class="label">접속 신청</span> <span data-site="email"></span></p>
-        <p class="hint" data-site="draftNotice"></p>
-      </div>
-    </div>
-  </div>
-  <div class="foot-bottom">
-    <div class="wrap">
-      <p class="copyright" data-site="copyright"></p>
-    </div>
+    <p class="foot-logo">
+      <!-- 운영기관 로고: files/logo_keco.png (190x51 권장) 를 넣으면 자동으로 표시됩니다.
+           파일이 없으면 아래 기관명 텍스트가 대신 나옵니다. -->
+      <img src="files/logo_keco.png" alt="한국환경공단"
+           onerror="this.parentNode.classList.add('no-img');this.remove()">
+      <span>한국환경공단</span>
+    </p>
+
+    <address data-site="address"></address>
+    <p><b>대표전화</b> <span data-site="telMain"></span></p>
+    <p><b>접속 신청·문의</b> <span data-site="org"></span> <span data-site="tel"></span> (<span data-site="telHours"></span>)</p>
+    <p><b>접속 신청 이메일</b> <span data-site="email"></span></p>
+    <p class="hint" data-site="draftNotice"></p>
+
+    <ul class="foot-policy">
+      <li><a class="em" href="https://www.keco.or.kr/web/lay1/S1T6C1348/sublink.do" target="_blank" rel="noopener">개인정보처리방침</a></li>
+      <li><a href="https://www.keco.or.kr/web/lay1/S1T1416C1484/contents.do" target="_blank" rel="noopener">영상정보처리기기 운영관리 방침</a></li>
+      <li><a href="https://www.keco.or.kr/web/lay1/S1T6C1349/contents.do" target="_blank" rel="noopener">저작권정책</a></li>
+      <li><a href="https://www.keco.or.kr/web/lay1/S1T6C1350/contents.do" target="_blank" rel="noopener">이메일무단수집거부</a></li>
+    </ul>
+
+    <p class="copyright" data-site="copyright"></p>
   </div>
 </footer>
 
