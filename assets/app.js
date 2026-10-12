@@ -1,4 +1,4 @@
-/* ══════════════════════════════════════════════════════════════════
+TESTREPLACE/* ══════════════════════════════════════════════════════════════════
    공통 스크립트 — index.html / view.html 이 함께 사용합니다.
    내용(글·연락처)은 data/ 폴더만 고치면 되고, 이 파일은 건드릴 일이
    거의 없습니다.
@@ -147,7 +147,7 @@
     var nav = function (item) {
       return item
         ? '<a href="' + postUrl(item) + '">' + esc(item.title) + '</a>'
-        : '<span class="off">해당 글 이 없습니다.</span>';
+        : '<span class="off">해당 글이 없습니다.</span>';
     };
 
     app.innerHTML =
@@ -160,7 +160,7 @@
         '</div>' +
         '<div class="post-body" id="postBody"><p class="off">본문을 불러오는 중입니다…</p></div>' +
         '<div class="post-files"><h3>첨부파일</h3><ul>' + files + '</ul></div>' +
-        '<nav class="post-nav" aria-label="이전·뒲음 글">' +
+        '<nav class="post-nav" aria-label="이전·다음 글">' +
           '<div><span class="lbl">이전 글</span>' + nav(prev) + '</div>' +
           '<div><span class="lbl">다음 글</span>' + nav(next) + '</div>' +
         '</nav>' +
@@ -174,7 +174,7 @@
       .then(function (html) { document.getElementById('postBody').innerHTML = html; })
       .catch(function (e) {
         document.getElementById('postBody').innerHTML =
-          '<p class="off">본문(' + esc(board.dir + '/' + p.id + '.html') + ')을 불러오지 못했습니다.' + (location.protocol === 'file:' ? '<br>파일을 직접 열면(file://) 본문을 읽을 수 없습니다. 왹분서(GitHub Pages 등)에서 확인해 주세요.' : '') + '</p>';
+          '<p class="off">본문(' + esc(board.dir + '/' + p.id + '.html') + ')을 불러오지 못했습니다.' + (location.protocol === 'file:' ? '<br>파일을 직접 열면(file://) 본문을 읽을 수 없습니다. 웹서버(GitHub Pages 등)에서 확인해 주세요.' : '') + '</p>';
         console.error('[GBMS] body load failed', e);
       });
   }
@@ -185,7 +185,7 @@
       'fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>';
   }
 
-  /* ── 사이트 공통 정보 주입: <span data-site="tel"> 처럼 쓸면 채워집니다 ── */
+  /* ── 사이트 공통 정보 주입: <span data-site="tel"> 처럼 쓰면 채워집니다 ── */
   function fillSite() {
     document.querySelectorAll('[data-site]').forEach(function (el) {
       var v = BASE.site[el.getAttribute('data-site')];
