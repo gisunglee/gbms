@@ -3,28 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>게시글 상세 | 온실가스감축인지 운영시스템 접속 안내</title>
+<title>게시글 | 온실가스감축인지 운영시스템 접속 안내</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%278%27 fill=%27%230b4da2%27/%3E%3Ctext x=%2716%27 y=%2721%27 font-size=%2713%27 font-family=%27sans-serif%27 font-weight=%27700%27 fill=%27%23fff%27 text-anchor=%27middle%27%3EG%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="style.css">
+<script src="data/site.js" defer></script>
+<script src="data/posts.js" defer></script>
+<script src="assets/app.js" defer></script>
 </head>
 <body>
 
-<div class="utilbar">
-  <div class="wrap">
-    <span>온실가스감축인지 운영시스템(GBMS) 접속 안내</span>
-    <span>문의 032-590-3437, 3469 (평일 09:00~18:00)</span>
-  </div>
+<a class="skip" href="#main">본문 바로가기</a>
+
+<!-- 전자정부 배너 — 실제 운영 시 행정안전부 제공 공식 이미지·문구로 교체하세요 -->
+<div class="govbar">
+  <div class="wrap"><span data-site="govNotice"></span></div>
 </div>
 
 <header>
-  <div class="wrap head-inner">
-    <div class="brand">
-      <div class="emblem">GBMS</div>
-      <a href="index.html">
-        <b>온실가스감축인지 운영시스템</b>
-        <small>산하기관·기술자문위원 접속(SSL VPN) 신청 안내</small>
-      </a>
+  <div class="wrap">
+    <div class="head-top">
+      <div class="brand">
+        <div class="emblem" data-site="emblem" aria-hidden="true"></div>
+        <a href="index.html">
+          <b data-site="name"></b>
+          <small data-site="subtitle"></small>
+        </a>
+      </div>
+      <div class="head-util">
+        <span>문의 <span class="tel" data-site="tel"></span></span>
+        <span data-site="telHours"></span>
+      </div>
     </div>
-    <nav class="gnb">
+    <nav class="gnb" aria-label="주요 메뉴">
       <a href="index.html#apply">신청 절차</a>
       <a href="index.html#docs">제출 서류</a>
       <a href="index.html#access">접속 방법</a>
@@ -36,237 +46,43 @@
   </div>
 </header>
 
-<div class="page-head">
-  <div class="wrap">
-    <div class="crumb"><a href="index.html">홈</a> &nbsp;›&nbsp; <span id="crumbBoard">공지사항</span></div>
-    <h1 id="boardTitle">공지사항</h1>
+<main id="main">
+  <div class="page-head">
+    <div class="wrap">
+      <nav class="crumb" aria-label="현재 위치"><a href="index.html">홈</a> › <span id="crumbBoard">게시판</span></nav>
+      <h1 id="boardTitle">게시판</h1>
+    </div>
   </div>
-</div>
 
-<div class="post">
-  <div class="wrap" id="app"></div>
-</div>
+  <div class="post">
+    <div class="wrap" id="app"></div>
+  </div>
+</main>
 
 <footer>
   <div class="wrap">
-    <b>온실가스감축인지 운영시스템(GBMS) 접속 안내</b>
-    <p>한국환경공단 탄소예산지원부 &nbsp;|&nbsp; 전화 032-590-3437, 3469</p>
-    <p style="margin-top:12px;color:#7c99bb">본 페이지는 2차 구축사업 화면설계용 시안입니다. 이메일 주소 등 일부 정보는 운영 개시 전 확정됩니다.</p>
+    <div class="foot-inner">
+      <div class="foot-brand">
+        <div class="emblem" data-site="emblem" aria-hidden="true"></div>
+        <div>
+          <b data-site="org"></b>
+          <span data-site="utilbarNote"></span>
+        </div>
+      </div>
+      <div class="foot-info">
+        <address data-site="address"></address>
+        <p><span class="label">문의</span> <span data-site="tel"></span> (<span data-site="telHours"></span>)</p>
+        <p><span class="label">접속 신청</span> <span data-site="email"></span></p>
+        <p class="hint" data-site="draftNotice"></p>
+      </div>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <div class="wrap">
+      <p class="copyright" data-site="copyright"></p>
+    </div>
   </div>
 </footer>
-
-<script>
-/* ══════════════════════════════════════════════════════════════
-   게시글 데이터 (여기만 고치면 됩니다)
-
-   · notice = 공지사항 게시판 / data = 자료실 게시판
-   · id      : index.html 의 링크 view.html?b=notice&id=◯◯ 와 같아야 합니다
-   · files   : 첨부파일 [표시이름, 실제경로, 용량]  — 경로가 "" 이면 준비중으로 표시
-   · body    : 본문 HTML (p, ul, h3, table 등 자유롭게 사용)
-   ══════════════════════════════════════════════════════════════ */
-const DB = {
-  notice: {
-    label: '공지사항',
-    list: [
-      {
-        id: 'p1', no: '공지', pin: true,
-        title: '산하기관·기술자문위원 SSL VPN 접속 신청 안내 (상시 접수)',
-        writer: '탄소예산지원부', date: '2026-09-01', hit: '412',
-        files: [['[서식 제1호] 온실가스감축인지 운영시스템 SSL VPN 접속 신청서.hwpx', 'files/form01_vpn_apply.hwpx', 'HWPX']],
-        body: `
-          <p>온실가스감축인지 운영시스템은 행정망에서 운영되어, 산하기관 사업담당자와 기술자문위원은 <b>SSL VPN</b>을 통해서만 접속할 수 있습니다. 시스템 이용이 필요한 분은 아래 절차에 따라 접속을 신청해 주시기 바랍니다.</p>
-          <h3>신청 대상</h3>
-          <ul>
-            <li>산하기관 사업담당자 — 소관 세부사업의 온실가스감축인지 예산서·결산서 사업별 자료 작성</li>
-            <li>기술자문위원 — 감축사업 분류·감축효과 분석 등 자문의견 등록</li>
-          </ul>
-          <div class="quote">중앙관서(부처) 담당자는 행정망 PC에서 직접 접속하므로 신청 대상이 아닙니다.</div>
-          <h3>제출 서류 (2종)</h3>
-          <table>
-            <tr><th>순번</th><th>서류</th><th>비고</th></tr>
-            <tr><td>1</td><td class="l">SSL VPN 접속 신청서 (서식 제1호)</td><td class="l">첨부 서식(HWPX) 작성, 소속기관 확인란 포함</td></tr>
-            <tr><td>2</td><td class="l">재직증명서</td><td class="l">소속기관 발급, 스캔본(PDF·이미지) 가능</td></tr>
-          </table>
-          <h3>제출 방법</h3>
-          <ul>
-            <li>제출처: <b>gbms-apply@example.or.kr</b> (한국환경공단 탄소예산지원부) ※ 이메일 주소는 운영 개시 전 확정</li>
-            <li>메일 제목: <b>[GBMS VPN 신청] 기관명_성명</b></li>
-            <li>담당자가 서류를 확인한 뒤, 신청서에 기재한 이메일로 SSL VPN 클라이언트와 접속 안내를 보내드립니다.</li>
-          </ul>
-          <h3>문의</h3>
-          <p>한국환경공단 탄소예산지원부 032-590-3437, 3469 (평일 09:00~18:00)</p>`
-      },
-      {
-        id: '4', no: 4, isNew: true,
-        title: '접속 신청서 서식(서식 제1호) 개정 안내 – 접속 PC 정보·소속기관 확인란 추가',
-        writer: '탄소예산지원부', date: '2026-09-07', hit: '96',
-        files: [['[서식 제1호] 온실가스감축인지 운영시스템 SSL VPN 접속 신청서.hwpx', 'files/form01_vpn_apply.hwpx', 'HWPX']],
-        body: `
-          <p>SSL VPN 접속 신청서 서식이 개정되었습니다. 이후 신청은 개정 서식으로 제출해 주시기 바랍니다.</p>
-          <h3>개정 내용</h3>
-          <ul>
-            <li>회원유형 선택란 추가 (산하기관 사업담당자 / 기술자문위원)</li>
-            <li>접속 PC 정보란 추가 (운영체제, 공인 IP, PC 소재지)</li>
-            <li>보안 준수 서약 문구 및 신청인 서명란 추가</li>
-            <li>소속기관 확인란(부서장 또는 기관 담당자 확인) 추가</li>
-          </ul>
-          <p>개정 서식은 첨부파일 또는 자료실에서 내려받을 수 있습니다.</p>`
-      },
-      {
-        id: '3', no: 3,
-        title: '담당자 변경 시 접속 계정 처리 안내',
-        writer: '탄소예산지원부', date: '2026-08-20', hit: '158',
-        files: [],
-        body: `
-          <p>SSL VPN 계정은 신청인 본인만 사용할 수 있으며, 다른 사람에게 넘겨 사용할 수 없습니다. 담당자가 바뀐 경우 다음과 같이 처리해 주시기 바랍니다.</p>
-          <ul>
-            <li>새 담당자가 신청서(서식 제1호)와 재직증명서를 제출합니다.</li>
-            <li>메일 본문에 이전 담당자 성명을 함께 기재해 주시면 기존 계정을 정리합니다.</li>
-            <li>사용 목적이 끝난 계정도 담당자에게 알려 주시기 바랍니다.</li>
-          </ul>`
-      },
-      {
-        id: '2', no: 2,
-        title: '「2027년 온실가스감축인지 예산서 및 기금운용계획서 작성지침」 자료실 게재',
-        writer: '탄소예산지원부', date: '2026-05-04', hit: '631',
-        files: [['2027년 온실가스감축인지 예산서 및 기금운용계획서 작성지침.pdf', '', 'PDF']],
-        body: `
-          <p>기획예산처(기후에너지환경부 협조)가 각 부처에 통보한 「2027년 온실가스감축인지 예산서 및 기금운용계획서 작성지침」(2026. 4.)을 자료실에 게재하였습니다.</p>
-          <p>예산서 작성 대상사업 선정·분류, 총괄표 및 사업별 설명자료 작성 방법, 감축량 산정방법론과 배출계수 등을 확인할 수 있습니다.</p>`
-      },
-      {
-        id: '1', no: 1,
-        title: '온실가스감축인지 운영시스템 접속 안내 페이지 개설',
-        writer: '탄소예산지원부', date: '2026-04-28', hit: '540',
-        files: [],
-        body: `
-          <p>행정망 외부 사용자(산하기관·기술자문위원)의 시스템 접속 신청 절차를 안내하기 위한 페이지를 개설하였습니다.</p>
-          <p>신청 절차, 제출 서류, 승인 후 접속 방법과 함께 공지사항·자료실을 운영합니다.</p>`
-      }
-    ]
-  },
-
-  data: {
-    label: '자료실',
-    list: [
-      {
-        id: '4', no: 4,
-        title: '[서식 제1호] 온실가스감축인지 운영시스템 SSL VPN 접속 신청서',
-        writer: '탄소예산지원부', date: '2026-09-07', hit: '287',
-        files: [['[서식 제1호] 온실가스감축인지 운영시스템 SSL VPN 접속 신청서.hwpx', 'files/form01_vpn_apply.hwpx', 'HWPX']],
-        body: `
-          <p>산하기관 사업담당자·기술자문위원이 SSL VPN 접속을 신청할 때 작성하는 서식입니다. 작성 후 재직증명서와 함께 이메일로 제출합니다.</p>
-          <h3>작성 항목</h3>
-          <table>
-            <tr><th>구분</th><th>작성 내용</th></tr>
-            <tr><td>신청인 정보</td><td class="l">소속기관·부서·직위·성명·전화·이메일</td></tr>
-            <tr><td>회원유형</td><td class="l">산하기관 사업담당자 / 기술자문위원 중 선택</td></tr>
-            <tr><td>사용 목적·기간</td><td class="l">시스템 이용 업무와 사용 기간</td></tr>
-            <tr><td>접속 PC 정보</td><td class="l">운영체제, 공인 IP, PC 소재지</td></tr>
-            <tr><td>보안 준수 서약</td><td class="l">서약 문구 확인 후 신청인 서명</td></tr>
-            <tr><td>소속기관 확인</td><td class="l">부서장 또는 기관 담당자 확인·서명</td></tr>
-          </table>
-          <p>한컴오피스 한글 2014 이상에서 열 수 있으며, 작성 후 HWPX 그대로 또는 PDF로 저장하여 제출할 수 있습니다.</p>`
-      },
-      {
-        id: '3', no: 3,
-        title: 'SSL VPN 접속 신청 안내문 (신청 절차 요약)',
-        writer: '탄소예산지원부', date: '2026-09-01', hit: '143',
-        files: [['SSL VPN 접속 신청 안내문.pdf', '', 'PDF']],
-        body: `
-          <p>신청 대상, 제출 서류, 제출 방법, 승인 후 접속 방법을 한 장으로 요약한 안내문입니다. 기관 내부 공유용으로 활용하실 수 있습니다.</p>`
-      },
-      {
-        id: '2', no: 2,
-        title: '2027년 온실가스감축인지 예산서 및 기금운용계획서 작성지침',
-        writer: '탄소예산지원부', date: '2026-05-04', hit: '912',
-        files: [['2027년 온실가스감축인지 예산서 및 기금운용계획서 작성지침.pdf', '', 'PDF']],
-        body: `
-          <p>기획예산처·기후에너지환경부가 각 부처에 통보한 2027년 작성지침(2026. 4.)입니다.</p>
-          <ul>
-            <li>Part Ⅰ 제도 개요 — 개념, 법적근거, 추진경과, 추진체계, 운영절차</li>
-            <li>Part Ⅱ 작성 개요 — 작성 대상사업 선정·분류, 전년대비 주요 변경사항</li>
-            <li>Part Ⅲ 작성 방법 — 총괄표(서식1·2), 사업별 설명자료(서식3)</li>
-            <li>부록 — 작성 양식, 법적근거, 국가 탄소중립 정책, 작성 예시, 감축량 산정방법론, 배출계수, R&amp;D 참고자료, 용어, FAQ</li>
-          </ul>`
-      },
-      {
-        id: '1', no: 1,
-        title: '2025년 온실가스감축인지 결산서 및 기금결산서 작성지침',
-        writer: '탄소예산지원부', date: '2026-04-28', hit: '655',
-        files: [['2025년 온실가스감축인지 결산서 및 기금결산서 작성지침.pdf', '', 'PDF']],
-        body: `
-          <p>재정경제부·기후에너지환경부가 각 부처에 통보한 2025회계연도 결산서 작성지침(2026. 1.)입니다. 총괄표(서식1)와 사업별 집행내역(서식2) 작성 방법, 작성 대상 목록, 배출계수 등을 담고 있습니다.</p>`
-      }
-    ]
-  }
-};
-
-/* ───────── 렌더링 (아래는 수정할 필요 없습니다) ───────── */
-(function () {
-  const q = new URLSearchParams(location.search);
-  const bKey = DB[q.get('b')] ? q.get('b') : 'notice';
-  const board = DB[bKey];
-  const id = q.get('id');
-  const idx = board.list.findIndex(p => String(p.id) === String(id));
-
-  document.getElementById('crumbBoard').textContent = board.label;
-  document.getElementById('boardTitle').textContent = board.label;
-  const backHref = 'index.html#' + (bKey === 'data' ? 'files' : 'notice');
-  const app = document.getElementById('app');
-
-  if (idx === -1) {
-    app.innerHTML =
-      '<div class="post-box"><div class="empty">요청하신 게시글을 찾을 수 없습니다.<br><br>' +
-      '<a class="btn-solid" href="' + backHref + '">목록으로</a></div></div>';
-    return;
-  }
-
-  const p = board.list[idx];
-  document.title = p.title + ' | ' + board.label;
-
-  const fileHtml = !p.files || p.files.length === 0
-    ? '<li style="color:#8b98a8">첨부파일이 없습니다.</li>'
-    : p.files.map(function (f) {
-        const name = f[0], path = f[1], size = f[2] || '';
-        return path
-          ? '<li>📎 <a href="' + path + '" download>' + name + '</a> <span class="size">(' + size + ')</span></li>'
-          : '<li>📎 <span style="color:#8b98a8">' + name + '</span> <span class="size">(' + size + ' · 준비 중)</span></li>';
-      }).join('');
-
-  const prev = board.list[idx - 1];
-  const next = board.list[idx + 1];
-  const link = function (item) {
-    return item
-      ? '<a href="view.html?b=' + bKey + '&id=' + item.id + '">' + item.title + '</a>'
-      : '<span class="off">해당 글이 없습니다.</span>';
-  };
-
-  app.innerHTML =
-    '<div class="post-box">' +
-      '<div class="post-title"><h2>' +
-        (p.pin ? '<span class="badge badge-notice">필독</span>' : '') +
-        (p.isNew ? '<span class="badge badge-new">NEW</span>' : '') +
-        p.title + '</h2></div>' +
-      '<div class="post-meta">' +
-        '<span><b>번호</b>' + p.no + '</span>' +
-        '<span><b>작성자</b>' + p.writer + '</span>' +
-        '<span><b>등록일</b>' + p.date + '</span>' +
-        '<span><b>조회수</b>' + p.hit + '</span>' +
-      '</div>' +
-      '<div class="post-body">' + p.body + '</div>' +
-      '<div class="post-files"><h4>첨부파일</h4><ul>' + fileHtml + '</ul></div>' +
-      '<div class="post-nav">' +
-        '<div><span class="lbl">▲ 이전글</span>' + link(prev) + '</div>' +
-        '<div><span class="lbl">▼ 다음글</span>' + link(next) + '</div>' +
-      '</div>' +
-    '</div>' +
-    '<div class="post-actions">' +
-      '<a class="btn-line" href="javascript:history.back()">◀ 뒤로</a>' +
-      '<a class="btn-solid" href="' + backHref + '">목록으로</a>' +
-    '</div>';
-})();
-</script>
 
 </body>
 </html>
