@@ -15,7 +15,6 @@
   --navy-500:#2b7de0;
   --tint-100:#e6eef7;
   --tint-050:#f4f8fc;
-  --banner:#edf1f5;      /* 전자정부 배너 띠 */
   --footer-bg:#f0f0f0;
   --line:#d8d8d8;
   --line-soft:#e7ecf1;
@@ -54,10 +53,6 @@ a:hover{text-decoration:underline}
 .skip:focus{left:0;text-decoration:none}
 
 section,[id]{scroll-margin-top:var(--header-h)}
-
-/* ── 전자정부 배너 (정부 누리집 공통 안내 띠) ── */
-.govbar{background:var(--banner);font-size:15px;color:var(--text)}
-.govbar .wrap{display:flex;align-items:center;min-height:32px;padding-top:6px;padding-bottom:6px;gap:8px}
 
 /* ── 헤더 ── */
 header{background:var(--white);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
@@ -327,7 +322,7 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);color:var(--
 
 /* ══════════ 인쇄 ══════════ */
 @media print{
-  .govbar,.head-util,.gnb,.skip,.hero-btns,.apply-box .btns,.post-actions,.post-nav{display:none}
+  .head-util,.gnb,.skip,.hero-btns,.apply-box .btns,.post-actions,.post-nav{display:none}
   header{position:static;border-bottom:1px solid #999}
   .hero{background:none;color:#000;padding:20px 0}
   .hero h1,.hero p{color:#000}
