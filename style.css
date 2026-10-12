@@ -270,26 +270,19 @@ details.more .tbl-wrap{margin-top:16px}
 
 /* ══════════ 푸터 (정부 누리집 표준 톤) ══════════ */
 footer{background:var(--footer-bg);border-top:1px solid var(--line);color:var(--text);font-size:17px}
-.foot-inner{display:flex;gap:40px;align-items:flex-start;justify-content:space-between;padding:40px 0;flex-wrap:wrap}
-.foot-brand{display:flex;align-items:center;gap:14px;flex:none}
-.foot-brand .foot-brand b{display:block;font-size:20px;font-weight:700;letter-spacing:-.4px}
-.foot-brand span{display:block;font-size:15px;color:var(--muted)}
-.foot-info{flex:1 1 420px}
-.foot-info address{font-style:normal;margin:0 0 6px}
-.foot-info p{margin:4px 0}
-.foot-info .label{font-weight:700}
-.foot-info .hint{font-size:15px;color:var(--muted)}
-.foot-bottom{border-top:1px solid var(--line);padding:18px 0;font-size:15px;color:var(--muted)}
-.foot-bottom .draft{margin:0}
-.copyright{margin:8px 0 0;font-size:15px;color:var(--muted)}
-
-/* ── 하단 관련 누리집 ── */
-.foot-sites{background:#fff;border-top:1px solid var(--line)}
-.foot-sites .wrap{padding-top:16px;padding-bottom:16px}
-.foot-sites ul{display:flex;gap:10px;margin:0;padding:0 0 4px;list-style:none;overflow-x:auto}
-.foot-sites li{flex:none}
-.foot-sites a{position:relative;display:flex;align-items:center;justify-content:center;min-width:190px;height:40px;padding:0 16px;border:1px solid var(--line);border-radius:4px;color:#33465c;font-size:14px;font-weight:600;white-space:nowrap}
-.foot-sites a:hover{border-color:var(--navy);color:var(--navy);text-decoration:none}
+footer .wrap{padding:40px 24px 32px}
+.foot-logo{margin:0 0 20px}
+.foot-logo img{display:block;height:51px;width:auto}
+.foot-logo span{display:none;font-size:22px;font-weight:700;letter-spacing:-.5px}
+.foot-logo.no-img span{display:block}
+footer address{font-style:normal;margin:0 0 10px}
+footer p{margin:5px 0}
+footer b{font-weight:700;margin-right:6px}
+footer .hint{margin-top:14px;font-size:15px;color:var(--muted)}
+.foot-policy{display:flex;flex-wrap:wrap;gap:12px 26px;margin:26px 0 0;padding:20px 0 0;list-style:none;border-top:1px solid var(--line);font-size:16px}
+.foot-policy a{color:var(--text)}
+.foot-policy a.em{color:var(--navy);font-weight:700}
+.copyright{margin:18px 0 0;font-size:15px;color:var(--muted)}
 
 /* ══════════ 반응형 ══════════ */
 @media (max-width:1024px){
@@ -316,7 +309,7 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);color:var(--
   .post-body{padding:24px 18px 30px;font-size:16px}
   .post-meta,.post-files,.post-nav div{padding-left:18px;padding-right:18px}
   .post-title{padding:20px 18px 16px}
-  .foot-inner{flex-direction:column;gap:20px;padding:32px 0}
+  footer .wrap{padding:32px 16px 28px}
   .col-no,.col-writer,.col-type{display:none}
   .tbl-wrap{overflow-x:visible}
 }
