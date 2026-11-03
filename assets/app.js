@@ -87,7 +87,7 @@
       if (isArchive) {
         var type = f ? f.type : '';
         var dl = f && f.path
-          ? '<a class="dl" href="' + esc(f.path) + '" download>받기</a>'
+          ? '<a class="dl" href="' + esc(f.path) + '" download aria-label="' + esc(p.title) + ' 내려받기">받기</a>'
           : '<span class="dl na">준비 중</span>';
         return '<tr' + (p.pin ? ' class="pin"' : '') + '>' +
                '<td class="col-no">' + esc(p._no) + '</td>' + subj +
@@ -190,8 +190,7 @@
     document.querySelectorAll('[data-site]').forEach(function (el) {
       var v = BASE.site[el.getAttribute('data-site')];
       if (v == null) return;
-      if (el.tagName === 'A' && el.hasAttribute('data-site-href')) el.href = v;
-      else el.textContent = v;
+      el.textContent = v;          // href 는 아래 data-site-href 루프에서 채움
     });
     document.querySelectorAll('[data-site-href]').forEach(function (el) {
       var k = el.getAttribute('data-site-href');
@@ -214,7 +213,7 @@
       entries.forEach(function (en) {
         if (!en.isIntersecting) return;
         links.forEach(function (a) { a.removeAttribute('aria-current'); });
-        if (map[en.target.id]) map[en.target.id].setAttribute('aria-current', 'true');
+        if (map[en.target.id]) map[en.target.id].setAttribute('aria-current', 'location');
       });
     }, { rootMargin: '-45% 0px -50% 0px' });
     Object.keys(map).forEach(function (id) { observer.observe(document.getElementById(id)); });

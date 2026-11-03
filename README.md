@@ -1,6 +1,8 @@
 # 온실가스감축인지 운영시스템 접속(SSL VPN) 신청 안내 페이지
 
-GitHub Pages 배포용 정적 페이지입니다.
+GitHub Pages 배포용 정적 페이지입니다. 배포 주소: https://gisunglee.github.io/gbms/
+
+> 관리 작업(글 추가·검증·미리보기)은 `CLAUDE.md` 와 `scripts/` 를 참고하세요. 개선 과제는 `docs/BACKLOG.md` 에 있습니다.
 
 ## 폴더 구조
 
@@ -15,6 +17,8 @@ data/
   notice/<id>.html  공지사항 본문
   archive/<id>.html 자료실 본문
 files/              첨부파일 실물
+scripts/            관리 스크립트 (check·new-post·preview·a11y)
+docs/BACKLOG.md     개선 과제 목록
 ```
 
 ## 글 추가하는 법 (2단계)
