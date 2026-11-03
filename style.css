@@ -108,7 +108,6 @@ nav.gnb a[aria-current]::after{background:var(--navy)}
 .btn-strong:hover{background:var(--navy-700);text-decoration:none;color:#fff}
 .btn-soft{background:var(--tint-050);color:var(--navy);border-color:var(--line)}
 .btn-soft:hover{background:var(--tint-100);text-decoration:none}
-.apply-box .tip{font-size:14px;color:var(--muted);margin:12px 0 0;text-align:center}
 
 /* ── 섹션 공통 ── */
 section{padding:64px 0;border-top:1px solid var(--line-soft)}
