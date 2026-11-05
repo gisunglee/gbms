@@ -12,7 +12,7 @@ window.SITE = {
   "telHours": "평일 09:00~18:00",
   "email": "gbms-apply@example.or.kr",
   "mailSubjectRule": "[GBMS VPN 신청] 기관명_성명",
-  "formPath": "files/form01_vpn_apply.hwpx",
+  "formPath": "files/[서식 제1호] 온실가스감축인지 운영시스템 SSL VPN 접속 신청서.hwpx",
   "draftNotice": "본 페이지는 2차 구축사업 화면설계용 시안입니다. 이메일 주소 등 일부 정보는 운영 개시 전 확정됩니다.",
   "copyright": "© Korea Environment Corporation. All rights reserved."
 };

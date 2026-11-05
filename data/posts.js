@@ -23,7 +23,7 @@ window.POSTS = {
       "writer": "탄소예산지원부",
       "files": [
         { "name": "[서식 제1호] 온실가스감축인지 운영시스템 SSL VPN 접속 신청서.hwpx",
-          "path": "files/form01_vpn_apply.hwpx", "type": "HWPX" }
+          "path": "files/[서식 제1호] 온실가스감축인지 운영시스템 SSL VPN 접속 신청서.hwpx", "type": "HWPX" }
       ]
     },
     {
@@ -32,7 +32,7 @@ window.POSTS = {
       "writer": "탄소예산지원부", "badge": "서식",
       "files": [
         { "name": "[서식 제1호] 온실가스감축인지 운영시스템 SSL VPN 접속 신청서.hwpx",
-          "path": "files/form01_vpn_apply.hwpx", "type": "HWPX" }
+          "path": "files/[서식 제1호] 온실가스감축인지 운영시스템 SSL VPN 접속 신청서.hwpx", "type": "HWPX" }
       ]
     },
     {
@@ -41,7 +41,7 @@ window.POSTS = {
       "writer": "탄소예산지원부",
       "files": [
         { "name": "[서식 제1호] 온실가스감축인지 운영시스템 SSL VPN 접속 신청서.hwpx",
-          "path": "files/form01_vpn_apply.hwpx", "type": "HWPX" }
+          "path": "files/[서식 제1호] 온실가스감축인지 운영시스템 SSL VPN 접속 신청서.hwpx", "type": "HWPX" }
       ]
     },
     {
