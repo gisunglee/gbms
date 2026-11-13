@@ -225,7 +225,7 @@ details.more .tbl-wrap{margin-top:16px}
 /* ── 문의 ── */
 .contact{background:var(--tint-050)}
 .contact .card{background:#fff}
-.contact dl{margin:0;display:grid;grid-template-columns:92px 1fr;gap:9px 14px;font-size:16px}
+.contact dl{margin:0;display:grid;grid-template-columns:170px 1fr;gap:9px 14px;font-size:16px}
 .contact dt{color:var(--muted);font-weight:600}
 .contact dd{margin:0}
 
@@ -282,6 +282,7 @@ footer address{font-style:normal;margin:0 0 10px}
 footer p{margin:5px 0}
 footer b{font-weight:700;margin-right:6px}
 footer .hint{margin-top:14px;font-size:15px;color:var(--muted)}
+footer .hint:empty{display:none}
 .foot-policy{display:flex;flex-wrap:wrap;gap:12px 26px;margin:26px 0 0;padding:20px 0 0;list-style:none;border-top:1px solid var(--line);font-size:16px}
 .foot-policy a{color:var(--text)}
 .foot-policy a.em{color:var(--navy);font-weight:700}
@@ -309,7 +310,8 @@ footer .hint{margin-top:14px;font-size:15px;color:var(--muted)}
   nav.gnb a{white-space:nowrap;padding:10px 12px;font-size:16px}
   nav.gnb a::after{left:12px;right:12px}
   header{position:static}
-  .contact dl{grid-template-columns:80px 1fr}
+  .contact dl{grid-template-columns:1fr;gap:2px}
+  .contact dd{margin-bottom:10px}
   .post-title h2{font-size:20px}
   .post-body{padding:24px 18px 30px;font-size:16px}
   .post-meta,.post-files,.post-nav div{padding-left:18px;padding-right:18px}

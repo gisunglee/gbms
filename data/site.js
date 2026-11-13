@@ -8,13 +8,14 @@ window.SITE = {
   "org": "한국환경공단 탄소예산지원부",
   "address": "(22689) 인천광역시 서구 환경로 42 (경서동 종합환경연구단지)",
   "telMain": "032-590-4000",
-  "tel": "032-590-3437, 3469",
+  "tel": "032-590-5576",
+  "telPolicy": "032-590-3437, 5571",
   "telHours": "평일 09:00~18:00",
-  "email": "gbms-apply@example.or.kr",
+  "email": "carbonzero@keco.or.kr",
   "docTo": "한국환경공단 이사장 (참조: 탄소예산지원부장)",
   "docRoute": "전자문서유통(전자결재시스템) 또는 문서24로 발송",
   "docTitle": "온실가스감축인지 운영시스템 SSL VPN 접속 신청",
   "formPath": "files/[서식 제1호] 온실가스감축인지 운영시스템 SSL VPN 접속 신청서.hwpx",
-  "draftNotice": "본 페이지는 2차 구축사업 화면설계용 시안입니다. 이메일 주소 등 일부 정보는 운영 개시 전 확정됩니다.",
+  "draftNotice": "",
   "copyright": "© Korea Environment Corporation. All rights reserved."
 };
