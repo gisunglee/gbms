@@ -157,9 +157,7 @@ section:first-of-type{border-top:0}
 .step .actor{display:inline-block;margin-top:12px;font-size:14px;font-weight:700;background:var(--tint-100);color:var(--navy);padding:4px 11px;border-radius:999px}
 
 /* ── 제출 서류 ── */
-.docs{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
 .doc{display:flex;gap:18px;border:1px solid var(--line);border-radius:var(--radius);padding:24px;background:#fff;box-shadow:var(--shadow)}
-.doc .no{flex:none;width:48px;height:48px;border-radius:8px;background:var(--navy);color:#fff;font-weight:700;font-size:20px;display:flex;align-items:center;justify-content:center}
 .doc h3{margin:0 0 6px;font-size:18px;font-weight:700}
 .doc p{margin:0;font-size:16px;color:var(--muted)}
 .doc .meta{margin-top:12px;display:flex;gap:9px;flex-wrap:wrap;align-items:center;font-size:15px}
@@ -304,7 +302,7 @@ footer .hint{margin-top:14px;font-size:15px;color:var(--muted)}
   .hero h1{font-size:28px}
   section{padding:44px 0}
   .sec-head h2{font-size:24px}
-  .grid-3,.steps,.who-grid,.docs,.submit,.flow{grid-template-columns:1fr}
+  .grid-3,.steps,.who-grid,.submit,.flow{grid-template-columns:1fr}
   .head-top{flex-direction:column;align-items:flex-start;gap:12px}
   .head-util{justify-content:flex-start}
   nav.gnb{width:100%;overflow-x:auto;flex-wrap:nowrap;gap:0}
