@@ -39,7 +39,7 @@ const data = loadGlobal('data/posts.js', 'POSTS');
 
 /* ── site.js ── */
 if (site) {
-  for (const k of ['name', 'org', 'tel', 'email', 'formPath', 'mailSubjectRule']) {
+  for (const k of ['name', 'org', 'tel', 'email', 'formPath', 'docTo', 'docTitle']) {
     if (!site[k]) err(`site.js: "${k}" 값이 비어 있음`);
   }
   if (site.formPath && !existsExact(site.formPath)) err(`site.js: formPath "${site.formPath}" 파일 없음`);

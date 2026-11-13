@@ -18,8 +18,8 @@ window.POSTS = {
 
   "posts": [
     {
-      "board": "notice", "id": "4", "date": "2026-09-07",
-      "title": "접속 신청서 서식(서식 제1호) 개정 안내 – 접속 PC 정보·소속기관 확인란 추가",
+      "board": "notice", "id": "4", "date": "2027-03-15",
+      "title": "접속 신청서 서식(서식 제1호) 개정 안내 – 공문 제출 전환, 신청 구분란 신설",
       "writer": "탄소예산지원부",
       "files": [
         { "name": "[서식 제1호] 온실가스감축인지 운영시스템 SSL VPN 접속 신청서.hwpx",
@@ -27,7 +27,7 @@ window.POSTS = {
       ]
     },
     {
-      "board": "archive", "id": "4", "date": "2026-09-07",
+      "board": "archive", "id": "4", "date": "2027-03-15",
       "title": "[서식 제1호] 온실가스감축인지 운영시스템 SSL VPN 접속 신청서",
       "writer": "탄소예산지원부", "badge": "서식",
       "files": [
@@ -36,8 +36,8 @@ window.POSTS = {
       ]
     },
     {
-      "board": "notice", "id": "p1", "date": "2026-09-01", "pin": true,
-      "title": "산하기관·기술자문위원 SSL VPN 접속 신청 안내 (상시 접수)",
+      "board": "notice", "id": "p1", "date": "2027-03-15", "pin": true,
+      "title": "공공기관 SSL VPN 접속 신청 안내 (상시 접수)",
       "writer": "탄소예산지원부",
       "files": [
         { "name": "[서식 제1호] 온실가스감축인지 운영시스템 SSL VPN 접속 신청서.hwpx",
@@ -45,7 +45,7 @@ window.POSTS = {
       ]
     },
     {
-      "board": "archive", "id": "3", "date": "2026-09-01",
+      "board": "archive", "id": "3", "date": "2027-03-15",
       "title": "SSL VPN 접속 신청 안내문 (신청 절차 요약)",
       "writer": "탄소예산지원부",
       "files": [
@@ -53,13 +53,13 @@ window.POSTS = {
       ]
     },
     {
-      "board": "notice", "id": "3", "date": "2026-08-20",
-      "title": "담당자 변경 시 접속 계정 처리 안내",
+      "board": "notice", "id": "3", "date": "2027-03-15",
+      "title": "담당자 변경 및 사용 종료 시 접속 계정 처리 안내",
       "writer": "탄소예산지원부",
       "files": []
     },
     {
-      "board": "archive", "id": "2", "date": "2026-05-04",
+      "board": "archive", "id": "2", "date": "2027-03-15",
       "title": "2027년 온실가스감축인지 예산서 및 기금운용계획서 작성지침",
       "writer": "탄소예산지원부",
       "files": [
@@ -67,7 +67,7 @@ window.POSTS = {
       ]
     },
     {
-      "board": "archive", "id": "1", "date": "2026-04-28",
+      "board": "archive", "id": "1", "date": "2027-03-15",
       "title": "2025년 온실가스감축인지 결산서 및 기금결산서 작성지침",
       "writer": "탄소예산지원부",
       "files": [
@@ -75,7 +75,7 @@ window.POSTS = {
       ]
     },
     {
-      "board": "notice", "id": "1", "date": "2026-04-28",
+      "board": "notice", "id": "1", "date": "2027-03-15",
       "title": "온실가스감축인지 운영시스템 접속 안내 페이지 개설",
       "writer": "탄소예산지원부",
       "files": []
