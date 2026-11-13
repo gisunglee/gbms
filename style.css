@@ -221,6 +221,11 @@ details p{margin:12px 0 0;color:#333;font-size:16px}
 details.more{margin-top:26px}
 details.more .tbl-wrap{margin-top:16px}
 .src{font-size:14px;color:var(--muted);margin-top:14px}
+.flow-lead{margin:14px 0 0;font-size:16px}
+tr.mine td{background:var(--tint-100)}
+tr.mine td:first-child{box-shadow:inset 4px 0 0 var(--navy)}
+.badge-mine{background:var(--navy);color:#fff;margin-left:6px;white-space:nowrap}
+td .sub{font-size:14px;color:var(--muted)}
 
 /* ── 문의 ── */
 .contact{background:var(--tint-050)}
